@@ -58,8 +58,8 @@ public class TestCausesAuto {
     private static final String FIRST_NAME = "Andrii";
     private static final String LAST_NAME = "Koval";
     private static final String DATE_OF_BIRTH = "05/23/2001";
-    private static final String NEW_EMAIL = "koval2653633@gmail.com";
-    private static final String NEW_PASSWORD = "123456aa";
+    private static final String NEW_EMAIL = "kovaal2653df@gmail.com";
+    private static final String NEW_PASSWORD = "1234356aa1";
 
     public static void main(String[] args) {
 
@@ -83,7 +83,6 @@ public class TestCausesAuto {
         secondDriver.findElement(CONFIRM_PASSWORD_INPUT_SELECTOR).sendKeys(NEW_PASSWORD);
         secondDriver.findElement(REGISTER_BUTTON_SELECTOR).click();
 
-        secondDriver.quit();
     }
 
     public static WebDriver setupDriver() {
