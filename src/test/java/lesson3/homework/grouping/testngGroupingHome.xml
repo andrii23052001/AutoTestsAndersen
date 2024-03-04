@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+    <test name="First">
+        <groups>
+            <run>
+                <include name="first" />
+            </run>
+        </groups>
+        <classes>
+            <class name="lesson3.homework.grouping.Groups" />
+        </classes>
+    </test>
+    <test name="Second">
+        <groups>
+            <run>
+                <include name="second" />
+            </run>
+        </groups>
+        <classes>
+            <class name="lesson3.homework.grouping.Groups" />
+        </classes>
+    </test>
+</suite>
