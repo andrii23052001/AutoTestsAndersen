@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class RegistrationAutoTest extends WebDriverSetup {
@@ -62,4 +63,9 @@ public class RegistrationAutoTest extends WebDriverSetup {
         Assert.assertEquals(passwordInput.getAttribute("value"), NEW_PASSWORD, "Поле Password не соответствует нашим данным" + ":" + NEW_PASSWORD);
         Assert.assertEquals(confirmPasswordInput.getAttribute("value"), NEW_PASSWORD, "Поле Confirm Password не соответствует нашим данным" + ":" + NEW_PASSWORD);
     }
+    @AfterTest
+    public void after() {
+        driver.quit();
+    }
 }
+
