@@ -24,6 +24,7 @@ public class BaseTest extends WebDriverSetup {
         guinnessPage = new GuinnessPage();
         hyrtutorialsPage = new HyrtutorialsPage();
         andersenLoginPage = new AndersenLoginPage();
+        andersenRegistrationPage = new AndersenRegistrationPage();
     }
 
     @AfterMethod

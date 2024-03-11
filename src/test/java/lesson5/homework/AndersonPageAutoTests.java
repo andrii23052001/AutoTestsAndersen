@@ -1,7 +1,6 @@
 package lesson5.homework;
 
 import base.BaseTest;
-import lessons5.homework.pageObject.AndersenRegistrationPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -64,12 +63,11 @@ public class AndersonPageAutoTests extends BaseTest {
     @Test(description = "successful registration of a new user with valid data")
     public void newUserSuccesfulRegistration() {
         driver.get(registrationPageUrl);
-        andersenRegistrationPage = new AndersenRegistrationPage();
         andersenRegistrationPage.
                 enterFirstName("Andrii")
                 .enterLastName("Koval")
                 .enterDateOfBirth("05/23/2001")
-                .enterEmail("koval23@gmail.com")
+                .enterEmail("koval26@gmail.com")
                 .enterPassword("ValidPassword")
                 .enterConfirmPassword("ValidPassword")
                 .clickOnSubmitButton();
@@ -79,12 +77,11 @@ public class AndersonPageAutoTests extends BaseTest {
     @Test(description = "Verify successful registration with future date of birth")
     public void successfulRegistrationWithFutureDateOfBirth() {
         driver.get(registrationPageUrl);
-        andersenRegistrationPage = new AndersenRegistrationPage();
         andersenRegistrationPage.
                 enterFirstName("Andrii")
                 .enterLastName("Koval")
                 .enterDateOfBirth("05/23/2050")
-                .enterEmail("koval33@gmail.com")
+                .enterEmail("koval36@gmail.com")
                 .enterPassword("ValidPassword")
                 .enterConfirmPassword("ValidPassword")
                 .clickOnSubmitButton();
@@ -94,12 +91,11 @@ public class AndersonPageAutoTests extends BaseTest {
     @Test(description = "Successful registration of a new user with lowercase last name")
     public void successfulRegistrationWithLowercaseLastName() {
         driver.get(registrationPageUrl);
-        andersenRegistrationPage = new AndersenRegistrationPage();
         andersenRegistrationPage.
                 enterFirstName("Andrii")
                 .enterLastName("lowercase")
                 .enterDateOfBirth("05/23/2050")
-                .enterEmail("koval43@gmail.com")
+                .enterEmail("koval46@gmail.com")
                 .enterPassword("ValidPassword")
                 .enterConfirmPassword("ValidPassword")
                 .clickOnSubmitButton();
