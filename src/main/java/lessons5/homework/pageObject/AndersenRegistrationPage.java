@@ -1,5 +1,6 @@
 package lessons5.homework.pageObject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,18 +36,21 @@ public class AndersenRegistrationPage extends BasePage {
         super();
     }
 
+    @Step("Enter first name")
     public AndersenRegistrationPage enterFirstName(String enterFirstName) {
         wait.until(ExpectedConditions.elementToBeClickable(firstName)).
                 sendKeys(enterFirstName);
         return this;
     }
 
+    @Step("Enter last name")
     public AndersenRegistrationPage enterLastName(String enterLastName) {
         wait.until(ExpectedConditions.elementToBeClickable(lastName)).
                 sendKeys(enterLastName);
         return this;
     }
 
+    @Step("Enter date of birth")
     public AndersenRegistrationPage enterDateOfBirth(String enterDateOfBirth) {
         wait.until(ExpectedConditions.elementToBeClickable(dateOfBirth)).
                 sendKeys(enterDateOfBirth);
@@ -54,29 +58,34 @@ public class AndersenRegistrationPage extends BasePage {
         return this;
     }
 
+    @Step("Enter email")
     public AndersenRegistrationPage enterEmail(String enterEmail) {
         wait.until(ExpectedConditions.elementToBeClickable(email)).
                 sendKeys(enterEmail);
         return this;
     }
 
+    @Step("Enter password")
     public AndersenRegistrationPage enterPassword(String enterPassword) {
         wait.until(ExpectedConditions.elementToBeClickable(password)).
                 sendKeys(enterPassword);
         return this;
     }
 
+    @Step("Enter confirm password")
     public AndersenRegistrationPage enterConfirmPassword(String enterConfirmPassword) {
         wait.until(ExpectedConditions.elementToBeClickable(confirmPassword)).
                 sendKeys(enterConfirmPassword);
         return this;
     }
 
+    @Step("Click on the submit button")
     public void clickOnSubmitButton() {
         wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
         submitButton.click();
     }
 
+    @Step("Get element after successful registration")
     public WebElement getElementAfterSuccessfulRegistration() {
         return wait.until(ExpectedConditions.elementToBeClickable(editAccountIcon));
     }

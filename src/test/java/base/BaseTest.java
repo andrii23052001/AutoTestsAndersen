@@ -3,9 +3,8 @@ package base;
 import WebDriverSetup.WebDriverSetup;
 import lessons5.homework.pageObject.*;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+
 
 public class BaseTest extends WebDriverSetup {
 
@@ -15,6 +14,7 @@ public class BaseTest extends WebDriverSetup {
     protected HyrtutorialsPage hyrtutorialsPage;
     protected AndersenLoginPage andersenLoginPage;
     protected AndersenRegistrationPage andersenRegistrationPage;
+
 
     @BeforeMethod
     public void setUp() {

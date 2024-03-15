@@ -1,5 +1,6 @@
 package lessons5.homework.pageObject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,10 +29,12 @@ public class AndersenLoginPage extends BasePage {
         super();
     }
 
+    @Step("Redirected to the registration page")
     public void redirectedToTheRegistrationPage() {
         wait.until(ExpectedConditions.elementToBeClickable(registrationButton)).click();
     }
 
+    @Step("Enter email")
     public AndersenLoginPage enterEmail(String enterEmail) {
         wait.until(ExpectedConditions.visibilityOf(email));
         wait.until(ExpectedConditions.elementToBeClickable(email))
@@ -39,6 +42,7 @@ public class AndersenLoginPage extends BasePage {
         return this;
     }
 
+    @Step("Enter password")
     public AndersenLoginPage enterPassword(String enterPassword) {
         wait.until(ExpectedConditions.visibilityOf(password));
         wait.until(ExpectedConditions.elementToBeClickable(password))
@@ -46,15 +50,18 @@ public class AndersenLoginPage extends BasePage {
         return this;
     }
 
+    @Step("Click on submit button")
     public void clickOnSubmitButton() {
         wait.until(ExpectedConditions.elementToBeClickable(submitButton))
                 .click();
     }
 
+    @Step("Get email and password error text")
     public String getEmailAndPasswordErrorText() {
         return wait.until(ExpectedConditions.elementToBeClickable(emailAndPasswordErrorText)).getText();
     }
 
+    @Step("Get element after successful authorization")
     public WebElement getElementAfterSuccessfulAuthorization() {
         return wait.until(ExpectedConditions.elementToBeClickable(editAccountIcon));
     }

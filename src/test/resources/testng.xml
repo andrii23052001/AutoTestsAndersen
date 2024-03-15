@@ -1,0 +1,7 @@
+<suite name="AndersenPageAutotest">
+    <test name = "My first autotest" >
+        <classes>
+            <class name = "lesson5.homework.AndersonPageAutoTests"/>
+        </classes>
+    </test>
+</suite>

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
@@ -15,19 +16,20 @@ public class WebDriverSetup {
     protected WebDriverWait wait;
     protected Actions actions;
 
+
     public WebDriver setupDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         this.actions = new Actions(driver);
         return driver;
     }
 
     public static WebDriverSetup getInstance() {
         if (instance == null)
-           instance = new WebDriverSetup();
+            instance = new WebDriverSetup();
         return instance;
     }
 
@@ -35,3 +37,4 @@ public class WebDriverSetup {
         return driver;
     }
 }
+
