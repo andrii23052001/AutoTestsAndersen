@@ -33,7 +33,7 @@ public class LoginTests {
 
     @BeforeMethod
     public void before() {
-        driver = WebDriverSetup.setupDriver();
+        driver = WebDriverSetup.getInstance().setupDriver();
         driver.get(LOGIN_URL);
     }
 
