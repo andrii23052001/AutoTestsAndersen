@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class AutoTestFromTestCase {
 
-    static WebDriver driver = WebDriverSetup.setupDriver();
+    static WebDriver driver = WebDriverSetup.getInstance().setupDriver();
 
     private static final String STORE_URL = "http://www.automationpractice.pl/index.php";
     private static final By ENTRY_FIELD = By.xpath("//input[@id='search_query_top']");

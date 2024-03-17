@@ -1,7 +1,7 @@
 package lesson2.homework;
 
-import org.openqa.selenium.*;
 import WebDriverSetup.WebDriverSetup;
+import org.openqa.selenium.*;
 //TASK3
 /*3)Написать метод в параметры которого принимаются два ВебЭлемента.
 
@@ -13,7 +13,7 @@ import WebDriverSetup.WebDriverSetup;
 
 public class ComparingWebElements {
 
-    static WebDriver driver = WebDriverSetup.setupDriver();
+    static WebDriver driver = WebDriverSetup.getInstance().setupDriver();
 
     public static void main(String[] args) {
         driver.get("https://andersenlab.com/");
@@ -69,7 +69,7 @@ public class ComparingWebElements {
         System.out.println("Horizontal position (X) of element 2: " + location2.getX());
         System.out.println("Area of element 1: " + area1);
         System.out.println("Area of element 2: " + area2);
-      /*  System.out.println(area3);*/
+        /*  System.out.println(area3);*/
     }
 }
   /*  В Java класс Dimension используется для представления размеров объекта в двумерном пространстве. Он часто используется в графических приложениях и веб-разработке для определения размеров различных элементов, таких как окна, изображения, компоненты интерфейса и другие.
@@ -80,5 +80,5 @@ public class ComparingWebElements {
         height (высота) - высота объекта.
         Эти поля предоставляют информацию о размере объекта в соответствующих направлениях. Класс Dimension также предоставляет методы для доступа к этим полям и для выполнения операций, таких как сравнение размеров, вычисление площади и других.*/
 
-  /*  Point в Selenium WebDriver представляет собой точку на веб-странице, определяемую горизонтальной (X) и вертикальной (Y) координатами.
-   *//*     Он используется для определения местоположения элементов на странице.*/
+/*  Point в Selenium WebDriver представляет собой точку на веб-странице, определяемую горизонтальной (X) и вертикальной (Y) координатами.
+ *//*     Он используется для определения местоположения элементов на странице.*/

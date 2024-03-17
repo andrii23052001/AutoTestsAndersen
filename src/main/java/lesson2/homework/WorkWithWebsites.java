@@ -1,7 +1,8 @@
 package lesson2.homework;
 
-import org.openqa.selenium.*;
 import WebDriverSetup.WebDriverSetup;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
 import java.util.Set;
 
@@ -27,7 +28,7 @@ public class WorkWithWebsites {
 
     static Set<String> windowHandles1;
     static Set<String> windowHandles2;
-    static WebDriver driver = WebDriverSetup.setupDriver();
+    static WebDriver driver = WebDriverSetup.getInstance().setupDriver();
 
     public static void main(String[] args) {
         driver.get("http://www.automationpractice.pl/index.php");
@@ -53,8 +54,7 @@ public class WorkWithWebsites {
         Set<String> tabs = driver.getWindowHandles();
         for (String tab : tabs) {
             driver.switchTo().window(tab);
-            System.out.println("Текущая вкладка: " + driver.getCurrentUrl());
-            System.out.println("Title: " + driver.getTitle());
+
         }
     }
 
