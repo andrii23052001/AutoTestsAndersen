@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+
 @Listeners({MyAllureListeners.class})
 public class AndersonPageAutoTests extends BaseTest {
 
@@ -22,8 +23,8 @@ public class AndersonPageAutoTests extends BaseTest {
     @Feature(value = "Page opening functionality")
     @Owner(value = "AQA specialist:Andrii Koval")
     public void checkLoginPageOpen() {
-        driver.get(loginPageUrl);
-        Assert.assertEquals(driver.getCurrentUrl(),
+         driver.get(loginPageUrl);
+       Assert.assertEquals(driver.getCurrentUrl(),
                 loginPageUrl, assertUrlMesage);
 
     }
@@ -36,7 +37,7 @@ public class AndersonPageAutoTests extends BaseTest {
     @Owner(value = "AQA specialist:Andrii Koval")
     public void authorizationWithValidData() {
         driver.get(loginPageUrl);
-        andersenLoginPage.enterEmail("aqqaandriikovalstudentt@gmail.com")
+        andersenLoginPage.enterEmail("aqaandriikovalstudentt@gmail.com")
                 .enterPassword("qwerty12")
                 .clickOnSubmitButton();
         Assert.assertTrue(andersenLoginPage.getElementAfterSuccessfulAuthorization().isDisplayed(), "The required element was not found");
@@ -104,7 +105,7 @@ public class AndersonPageAutoTests extends BaseTest {
                 enterFirstName("Andrii")
                 .enterLastName("Koval")
                 .enterDateOfBirth("05/23/2001")
-                .enterEmail("koval302@gmail.com")
+                .enterEmail("koval303@gmail.com")
                 .enterPassword("ValidPassword")
                 .enterConfirmPassword("ValidPassword")
                 .clickOnSubmitButton();
@@ -123,7 +124,7 @@ public class AndersonPageAutoTests extends BaseTest {
                 enterFirstName("Andrii")
                 .enterLastName("Koval")
                 .enterDateOfBirth("05/23/2050")
-                .enterEmail("koval202@gmail.com")
+                .enterEmail("koval203@gmail.com")
                 .enterPassword("ValidPassword")
                 .enterConfirmPassword("ValidPassword")
                 .clickOnSubmitButton();
@@ -142,7 +143,7 @@ public class AndersonPageAutoTests extends BaseTest {
                 enterFirstName("Andrii")
                 .enterLastName("lowercase")
                 .enterDateOfBirth("05/23/2050")
-                .enterEmail("koval102@gmail.com")
+                .enterEmail("koval103@gmail.com")
                 .enterPassword("ValidPassword")
                 .enterConfirmPassword("ValidPassword")
                 .clickOnSubmitButton();
